@@ -5,6 +5,8 @@ import Navbar from "./Navigation/Navbar";
 import Home from "./Static/Home";
 import Menu from "./Static/Menu";
 import Delivery from "./Static/Delivery";
+import ShoppingCart from "./Static/Shopping/ShoppingCart";
+import Logout from "./Authentication/Logout";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/menu" element={<Menu />} />
         <Route exact path="/delivery" element={<Delivery />} />
+        <Route exact path="/shoppingcart" element={<ShoppingCart />} />
+        <Route exact path="/logout" element={<Logout />} />
       </Routes>
       <img
         src={

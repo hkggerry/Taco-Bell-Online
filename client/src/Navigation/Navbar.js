@@ -20,6 +20,12 @@ function Navbar() {
       <NavLink to="/delivery" style={linkStyles}>
         Delivery
       </NavLink>
+      <NavLink to="/shoppingcart" style={linkStyles}>
+        Shopping Cart
+      </NavLink>
+      <NavLink to="/logout" style={linkStyles}>
+        Logout
+      </NavLink>
     </div>
   );
 }
