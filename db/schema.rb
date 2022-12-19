@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.integer "price"
     t.string "ingredients"
     t.string "image_url"
-    t.integer "rating"
+    t.integer "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

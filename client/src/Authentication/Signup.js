@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  // const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [name, setName] = useState("");
   const [errorsList, setErrorsList] = useState([]);
   const { signup } = useContext(CustomerContext);
@@ -19,7 +19,7 @@ function Signup() {
       body: JSON.stringify({
         username: username,
         password: password,
-        password_confirmation: passwordConfirmation,
+        // password_confirmation: passwordConfirmation,
         name: name,
       }),
     })
@@ -31,7 +31,7 @@ function Signup() {
         } else {
           setUsername("");
           setPassword("");
-          setPasswordConfirmation("");
+          // setPasswordConfirmation("");
           const errorLis = customer.errors.map((e) => <div>{e}</div>);
           setErrorsList(errorLis);
         }
@@ -61,7 +61,7 @@ function Signup() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="password_confirmation">Confirm Password:</label>
             <input
               type="password"
@@ -70,7 +70,7 @@ function Signup() {
               value={passwordConfirmation}
               onChange={(e) => setPasswordConfirmation(e.target.value)}
             />
-          </div>
+          </div> */}
           <br />
           <br />
           <div>

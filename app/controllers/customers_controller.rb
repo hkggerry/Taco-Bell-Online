@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
 
 def create
-    customer = customer.create(customer_params)
+    customer = Customer.create(customer_params)
     if customer.valid?
         session[:customer_id] = customer.id
         render json: customer
@@ -26,6 +26,6 @@ end
 private
 
 def customer_params
-    params.require(:customer).permit(:username, :password, :password_confirmation, :name)
+    params.permit(:username, :password, :name)
     end
 end

@@ -1,2 +1,3 @@
 class MenuCategoriesController < ApplicationController
+
 end
