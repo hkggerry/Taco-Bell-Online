@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
 
   create_table "menus", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.decimal "price"
     t.string "ingredients"
     t.string "image_url"
     t.integer "calories"

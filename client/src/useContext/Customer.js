@@ -31,7 +31,13 @@ function CustomerProvider({ children }) {
 
   return (
     <CustomerContext.Provider
-      value={{ customer, login, logout, signup, loggedIn }}
+      value={{
+        customer,
+        login,
+        logout,
+        signup,
+        loggedIn,
+      }}
     >
       {children}
     </CustomerContext.Provider>

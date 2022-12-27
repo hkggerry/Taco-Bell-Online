@@ -31,7 +31,7 @@ Menu.create([
     {
         id: 3,
         name: "Soft Potato Soft Taco",
-        price: 1.00,
+        price: 1.15,
         ingredients: "Cheddar Cheese, Flour Tortilla, Creamy Chipotle Sauce, Iceberg Lettuce, Potato Bites",
         image_url: "https://www.tacobell.com/images/22259_spicy_potato_soft_taco_269x269.jpg",
         calories: 240,
@@ -79,7 +79,7 @@ Menu.create([
     {
         id: 9,
         name: "Beefy Melt Burrito",
-        price: 2.00,
+        price: 2.25,
         ingredients: "Fiesta Tortilla Strips, Flour Tortilla, Nacho Cheese Sauce, Reduce-Fat Sour Cream, Seasoned Beef, Seasoned Rice, Three Cheese Blend",
         image_url: "https://www.tacobell.com/images/23263_beefy_melt_burrito_crunchy_269x269.jpg",
         calories: 620,
@@ -87,7 +87,7 @@ Menu.create([
     {
         id: 10,
         name: "Fiesta Veggie Burrito",
-        price: 2.00,
+        price: 2.20,
         ingredients: "Black Beans, Creamy Chipotle Sauce, Fiesta Tortilla Strips, Flour Tortilla, Guacamole, Reduced-Fat Sour Cream, Seasoned Rice, Three Cheese Blend, Tomatoes",
         image_url: "https://www.tacobell.com/images/23264_fiesta_veggie_burrito_269x269.jpg",
         calories: 570,
@@ -95,7 +95,7 @@ Menu.create([
     {
         id: 11,
         name: "Cheese Bean And Rice Burrito",
-        price: 1.00,
+        price: 1.15,
         ingredients: "Creamy Jalapeno Sauce, Flour Tortilla, Nacho Cheese Sauce, Refried Beans, Seasoned Rice",
         image_url: "https://www.tacobell.com/images/22283_cheesy_bean_and_rice_burrito_269x269.jpg",
         calories: 420,
@@ -175,7 +175,7 @@ Menu.create([
     {
         id: 21,
         name: "Water",
-        price: 0.00,
+        price: 0.05,
         ingredients: "Water",
         image_url: "https://www.tacobell.com/images/1400_cup_of_water_269x269.jpg",
         calories: 0,

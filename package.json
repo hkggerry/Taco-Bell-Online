@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.4.4"
+  },
+  "dependencies": {
+    "react-bootstrap-validation": "^0.1.11"
   }
 }
