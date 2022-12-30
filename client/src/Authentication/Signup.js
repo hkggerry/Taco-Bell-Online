@@ -40,6 +40,7 @@ function Signup() {
   return (
     <div>
       <center>
+        <hr />
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="username">Email Address:</label>

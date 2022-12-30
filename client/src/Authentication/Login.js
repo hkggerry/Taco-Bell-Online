@@ -36,6 +36,7 @@ function Login() {
   return (
     <div>
       <center>
+        <hr />
         <br />
         <form onSubmit={handleSubmit}>
           <div>

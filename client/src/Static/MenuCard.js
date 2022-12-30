@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { CustomerContext } from "../useContext/Customer";
 
 function MenuCard({ food }) {
   const { customer } = useContext(CustomerContext);
+  const [inCart, setInCart] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Clicked!");
-    console.log(food.id);
+    console.log("Order has been added to cart");
     fetch(`/carts`, {
       method: "POST",
       headers: {
@@ -19,7 +19,10 @@ function MenuCard({ food }) {
       }),
     })
       .then((res) => res.json())
-      .then((addFood) => console.log(addFood));
+      .then((addFood) => {
+        setInCart(true);
+        console.log(addFood);
+      });
   }
 
   function clickIngredient() {
@@ -30,13 +33,11 @@ function MenuCard({ food }) {
       <img src={food.image_url} alt={food.name} height="250px" />
       <h4>{food.name}</h4>${food.price} | {food.calories} Cal
       <p onClick={clickIngredient}>Nutrition Info: &#127790;</p>
-      <button onClick={handleSubmit}>Add to Cart</button>
-      {/* <form onSubmit={handleSubmit}>
-        <select name="selectList" id="selectList">
-            <option value="1">1</option> <option value="2">2</option>
-        </select>
-        <input type="submit" value="Add to cart" />
-      </form> */}
+      {inCart ? (
+        <u>Added </u>
+      ) : (
+        <button onClick={handleSubmit}>Add to Cart </button>
+      )}
     </div>
   );
 }

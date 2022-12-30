@@ -48,6 +48,7 @@ function Navbar() {
   } else {
     return (
       <div>
+        <h3>Hi Stranger!</h3>
         <NavLink to="/" style={linkStyles}>
           Home
         </NavLink>
