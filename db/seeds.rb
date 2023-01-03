@@ -189,3 +189,179 @@ Menu.create([
         calories: 10,
     }
 ])
+
+Category.create([
+    {
+        id: 1,
+        category: "Burritos",
+    },
+    {
+        id: 2,
+        category: "Tacos",
+    },
+    {
+        id: 3,
+        category: "Craving Value Menu",
+    },
+    {
+        id: 4,
+        category: "Drinks",
+    },
+    {
+        id: 5,
+        category: "Specialties",
+    }
+])
+
+MenuCategory.create([
+    {
+        id: 1,
+        menu_id: 1,
+        category_id: 2,
+    },
+    {
+        id: 2,
+        menu_id: 2,
+        category_id: 2,
+    },
+    {
+        id: 3,
+        menu_id: 3,
+        category_id: 2,
+    },
+    {
+        id: 4,
+        menu_id: 4,
+        category_id: 2,
+    },
+    {
+        id: 5,
+        menu_id: 5,
+        category_id: 5,
+    },
+    {
+        id: 6,
+        menu_id: 6,
+        category_id: 5,
+    },
+    {
+        id: 7,
+        menu_id: 7,
+        category_id: 5,
+    },
+    {
+        id: 8,
+        menu_id: 8,
+        category_id: 5,
+    },
+    {
+        id: 9,
+        menu_id: 9,
+        category_id: 1,
+    },
+    {
+        id: 10,
+        menu_id: 10,
+        category_id: 1,
+    },
+    {
+        id: 11,
+        menu_id: 11,
+        category_id: 1,
+    },
+    {
+        id: 12,
+        menu_id: 12,
+        category_id: 1,
+    },
+    {
+        id: 13,
+        menu_id: 13,
+        category_id: 5,
+    },
+    {
+        id: 14,
+        menu_id: 14,
+        category_id: 4,
+    },
+    {
+        id: 15,
+        menu_id: 15,
+        category_id: 4,
+    },
+    {
+        id: 16,
+        menu_id: 16,
+        category_id: 4,
+    },
+    {
+        id: 17,
+        menu_id: 17,
+        category_id: 4,
+    },
+    {
+        id: 18,
+        menu_id: 18,
+        category_id: 4,
+    },
+    {
+        id: 19,
+        menu_id: 19,
+        category_id: 4,
+    },
+    {
+        id: 20,
+        menu_id: 20,
+        category_id: 4,
+    },
+    {
+        id: 21,
+        menu_id: 21,
+        category_id: 4,
+    },
+    {
+        id: 22,
+        menu_id: 22,
+        category_id: 4,
+    },
+    {
+        id: 23,
+        menu_id: 8,
+        category_id: 3,
+    },
+    {
+        id: 24,
+        menu_id: 11,
+        category_id: 3,
+    },
+    {
+        id: 25,
+        menu_id: 10,
+        category_id: 3,
+    },
+    {
+        id: 26,
+        menu_id: 9,
+        category_id: 3,
+    },
+    {
+        id: 27,
+        menu_id: 5,
+        category_id: 3,
+    },
+    {
+        id: 28,
+        menu_id: 3,
+        category_id: 3,
+    },
+    {
+        id: 29,
+        menu_id: 1,
+        category_id: 3,
+    },
+    {
+        id: 30,
+        menu_id: 2,
+        category_id: 3,
+    }
+])

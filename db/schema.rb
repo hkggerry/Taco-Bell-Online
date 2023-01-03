@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "actors", force: :cascade do |t|
-    t.string "name"
-    t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "carts", force: :cascade do |t|
     t.integer "customer_id"
@@ -43,12 +37,6 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "members", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "menu_categories", force: :cascade do |t|
     t.integer "menu_id"
@@ -67,29 +55,6 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "movie_actors", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "actor_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
-  create_table "movies", force: :cascade do |t|
-    t.string "name"
-    t.string "release_date"
-    t.string "rating"
-    t.string "image_url"
-    t.text "short_description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.text "comments"
-    t.integer "member_id"
-    t.integer "movie_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
 end
