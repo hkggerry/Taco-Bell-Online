@@ -18,6 +18,11 @@
   flex-wrap: wrap;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .item{
     width: 300px;
     margin: 15px;
