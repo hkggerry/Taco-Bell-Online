@@ -52,10 +52,10 @@ function Navbar() {
         <NavLink to="/" style={linkStyles}>
           Home
         </NavLink>
-        <NavLink to="/menu" style={linkStyles}>
+        <NavLink to="/login" style={linkStyles}>
           Menu
         </NavLink>
-        <NavLink to="/delivery" style={linkStyles}>
+        <NavLink to="/login" style={linkStyles}>
           Delivery
         </NavLink>
         <NavLink to="/login" style={linkStyles}>

@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import MenuPreview from "./MenuPreview";
 
 function Home() {
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    fetch("/categories")
+      .then((resp) => resp.json())
+      .then((category) => setCategory(category));
+  }, []);
+  const eachCategory = category.map((foodType) => {
+    return <MenuPreview key={foodType.id} foodType={foodType} />;
+  });
+
   return (
     <div>
       <hr />
@@ -9,6 +20,8 @@ function Home() {
         alt="Doja Cat"
         height="500px"
       ></img>
+      <h3>Menu Preview</h3>
+      <div class="container1">{eachCategory}</div>
     </div>
   );
 }
