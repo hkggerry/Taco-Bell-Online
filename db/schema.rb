@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "carts", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "menu_id"
@@ -37,7 +36,6 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-
   create_table "menu_categories", force: :cascade do |t|
     t.integer "menu_id"
     t.integer "category_id"
@@ -51,10 +49,10 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.string "ingredients"
     t.string "image_url"
     t.integer "calories"
+    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
 
 
 end

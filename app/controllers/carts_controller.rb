@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
     def index
         carts = Cart.all
-        render json: carts.to_json(except: [:created_at, :updated_at], include: [menu: {only:[:name, :price, :image_url]}])
+        render json: carts.to_json(except: [:created_at, :updated_at], include: [menu: {only:[:name, :price, :image_url, :quantity]}])
       end
 
       def create

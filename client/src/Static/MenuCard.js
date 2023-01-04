@@ -24,6 +24,7 @@ function MenuCard({ food }) {
         console.log(addFood);
       });
   }
+
   function clickIngredient() {
     alert(food.ingredients);
   }

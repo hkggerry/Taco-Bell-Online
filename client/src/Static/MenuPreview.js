@@ -1,15 +1,21 @@
-import React from "react";
-import MenuPreviewCard from "./MenuPreviewCard";
+import React, { useState } from "react";
 
 function MenuPreview({ foodType }) {
-  const click = foodType.menu.map((eachFood) => {
-    return <MenuPreviewCard key={eachFood.id} eachFood={eachFood} />;
-  });
+  const [isClicked, setIsClicked] = useState([]);
+
   return (
     <div>
       <center>
-        <u>{foodType.category}</u>
-        {click}
+        <button
+          onClick={() =>
+            setIsClicked(
+              foodType.menu.map((eachFood) => <p>{eachFood.name}</p>)
+            )
+          }
+        >
+          {foodType.category}
+        </button>
+        {isClicked}
       </center>
     </div>
   );

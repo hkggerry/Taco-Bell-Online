@@ -12,9 +12,8 @@ function ShoppingCart() {
       .then((resp) => resp.json())
       .then((cartItems) => {
         setCart(cartItems);
-        // setToggle(!toggle);
       });
-  }, []);
+  }, [toggle]);
 
   function handleDeleteCart(deletedItem) {
     console.log("deletedItem", deletedItem);
@@ -41,7 +40,7 @@ function ShoppingCart() {
   return (
     <div>
       <hr />
-      {cartItem}
+      <div class="container"> {cartItem}</div>
     </div>
   );
 }
