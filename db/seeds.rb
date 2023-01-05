@@ -19,7 +19,7 @@ Menu.create([
         ingredients: "Cheddar Cheese, Flour Tortilla, Iceberg Lettuce, Seasoned Beef",
         image_url: "https://www.tacobell.com/images/22110_soft_taco_269x269.jpg",
         calories: 180,
-        quantity: 1,
+        
     },
     {
         id: 2,
@@ -28,7 +28,6 @@ Menu.create([
         ingredients: "Cheddar Cheese, Taco Shell, Iceberg Lettuce, Seasoned Beef",
         image_url: "https://www.tacobell.com/images/22100_crunchy_taco_269x269.jpg",
         calories: 190,
-        quantity: 1,
     },
     {
         id: 3,
@@ -37,7 +36,6 @@ Menu.create([
         ingredients: "Cheddar Cheese, Flour Tortilla, Creamy Chipotle Sauce, Iceberg Lettuce, Potato Bites",
         image_url: "https://www.tacobell.com/images/22259_spicy_potato_soft_taco_269x269.jpg",
         calories: 240,
-        quantity: 1,
     },
     {
         id: 4,
@@ -46,7 +44,6 @@ Menu.create([
         ingredients: "Cheddar Cheese, Doritos Loco Taco Nacho Cheese Shell, Iceberg Lettuce, Seasoned Beef",
         image_url: "https://www.tacobell.com/images/22172_nacho_cheese_doritos_locos_tacos_269x269.jpg",
         calories: 170,
-        quantity: 1,
     },
     {
         id: 5,
@@ -55,7 +52,6 @@ Menu.create([
         ingredients: "Seasoned Fries, Nacho Cheese Dip",
         image_url: "https://www.tacobell.com/images/28095_nacho_fries_269x269.jpg",
         calories: 330,
-        quantity: 1,
     },
     {
         id: 6,
@@ -64,7 +60,6 @@ Menu.create([
         ingredients: "Mexican Pizza Sauce, Mexican Pizza Shell, Refried Beans, Seasoned Beef, Three Cheese Blend, Tomataoes",
         image_url: "https://www.tacobell.com/images/22303_mexican_pizza_269x269.jpg",
         calories: 540,
-        quantity: 1,
     },
     {
         id: 7,
@@ -73,8 +68,7 @@ Menu.create([
         ingredients: "Flour Tortilla, Iceberg Lettuce, Nacho Cheese Sauce, Reduced-Fat Sour Cream, Seasoned Beef, Tomatoes, Tostada Shells",
         image_url: "https://www.tacobell.com/images/22362_crunchwrap_supreme_269x269.jpg",
         calories: 540,
-        quantity: 1,
-},
+    },
     {
         id: 8,
         name: "Chicken Chipotle Melt",
@@ -82,7 +76,6 @@ Menu.create([
         ingredients: "Cheddar Cheese, Creamy Chipotle Sauce, Flour Tortilla, Grilled Chicken",
         image_url: "https://www.tacobell.com/images/28158_chicken_chipotle_melt_269x269.jpg",
         calories: 190,
-        quantity: 1,
     },
     {
         id: 9,
@@ -91,7 +84,6 @@ Menu.create([
         ingredients: "Fiesta Tortilla Strips, Flour Tortilla, Nacho Cheese Sauce, Reduce-Fat Sour Cream, Seasoned Beef, Seasoned Rice, Three Cheese Blend",
         image_url: "https://www.tacobell.com/images/23263_beefy_melt_burrito_crunchy_269x269.jpg",
         calories: 620,
-        quantity: 1,
     },
     {
         id: 10,
@@ -100,7 +92,6 @@ Menu.create([
         ingredients: "Black Beans, Creamy Chipotle Sauce, Fiesta Tortilla Strips, Flour Tortilla, Guacamole, Reduced-Fat Sour Cream, Seasoned Rice, Three Cheese Blend, Tomatoes",
         image_url: "https://www.tacobell.com/images/23264_fiesta_veggie_burrito_269x269.jpg",
         calories: 570,
-        quantity: 1,
     },
     {
         id: 11,
@@ -109,7 +100,6 @@ Menu.create([
         ingredients: "Creamy Jalapeno Sauce, Flour Tortilla, Nacho Cheese Sauce, Refried Beans, Seasoned Rice",
         image_url: "https://www.tacobell.com/images/22283_cheesy_bean_and_rice_burrito_269x269.jpg",
         calories: 420,
-        quantity: 1,
     },
     {
         id: 12,
@@ -118,7 +108,6 @@ Menu.create([
         ingredients: "Creamy Chipotle Sauce,Fiesta Tortilla Strips, Flour Tortilla, Nacho Cheese Sauce, Reduced-Fat Sour Cream, Seasoned Rice, Steak, Three Cheese Blend",
         image_url: "https://www.tacobell.com/images/23194_double_steak_grilled_cheese_burrito_classic_269x269.jpg",
         calories: 920,
-        quantity: 1,
     },
     {
         id: 13,
@@ -127,7 +116,6 @@ Menu.create([
         ingredients: "Cheddar Cheese, Creamy Chipotle Sauce, Flour Tortilla, Nacho Cheese Sauce, Reduced-Fat Sour Cream, Seasoned Beef, Seasoned Rice",
         image_url: "https://www.tacobell.com/images/22371_quesarito_269x269.jpg",
         calories: 650,
-        quantity: 1,
     },
     {
         id: 14,
@@ -136,7 +124,6 @@ Menu.create([
         ingredients: "Mtn Dew® Baja Blast Freeze",
         image_url: "https://www.tacobell.com/images/1491_mtn_dew_baja_blast_freeze_269x269.jpg",
         calories: 190,
-        quantity: 1,
     },
     {
         id: 15,
@@ -145,7 +132,6 @@ Menu.create([
         ingredients: "Cherry Bliss Freeze",
         image_url: "https://www.tacobell.com/images/1648_cherry_bliss_freeze_269x269.jpg",
         calories: 220,
-        quantity: 1,
     },
     {
         id: 16,
@@ -154,7 +140,6 @@ Menu.create([
         ingredients: "Mango Freeze",
         image_url: "https://www.tacobell.com/images/1467_mango_freeze_269x269.jpg",
         calories: 190,
-        quantity: 1,
     },
     {
         id: 17,
@@ -163,7 +148,6 @@ Menu.create([
         ingredients: "Wild Cherry Freeze",
         image_url: "https://www.tacobell.com/images/1644_wild_cherry_freeze_269x269.jpg",
         calories: 190,
-        quantity: 1,
     },
     {
         id: 18,
@@ -172,7 +156,6 @@ Menu.create([
         ingredients: "Pepsi",
         image_url: "https://www.tacobell.com/images/1002_pepsi_269x269.jpg",
         calories: 380,
-        quantity: 1,
     },
     {
         id: 19,
@@ -181,7 +164,6 @@ Menu.create([
         ingredients: "MTN DEW",
         image_url: "https://www.tacobell.com/images/1012_mountain_dew_269x269.jpg",
         calories: 420,
-        quantity: 1,
     },
     {
         id: 20,
@@ -190,7 +172,6 @@ Menu.create([
         ingredients: "Sweet Iced Tea",
         image_url: "https://www.tacobell.com/images/1267_sweet_tea_269x269.jpg",
         calories: 170,
-        quantity: 1,
     },
     {
         id: 21,
@@ -199,7 +180,6 @@ Menu.create([
         ingredients: "Water",
         image_url: "https://www.tacobell.com/images/1400_cup_of_water_269x269.jpg",
         calories: 0,
-        quantity: 1,
     },
     {
         id: 22,
@@ -208,7 +188,6 @@ Menu.create([
         ingredients: "Iced Coffee",
         image_url: "https://www.tacobell.com/images/1534_iced_regular_coffee_269x269.jpg",
         calories: 10,
-        quantity: 1,
     }
 ])
 

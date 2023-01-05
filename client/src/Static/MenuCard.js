@@ -16,6 +16,7 @@ function MenuCard({ food }) {
       body: JSON.stringify({
         customer_id: customer.id,
         menu_id: food.id,
+        quantity: 1,
       }),
     })
       .then((res) => res.json())
