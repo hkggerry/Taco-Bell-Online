@@ -53,10 +53,11 @@ function Home() {
         <ImageSlider slides={slides} />
       </div>
       <p>&nbsp;</p>
-
+      <p>&nbsp;</p>
       <u>
         <h4>Menu Preview</h4>
       </u>
+      <br />
       <div class="container1">{eachCategory}</div>
     </div>
   );

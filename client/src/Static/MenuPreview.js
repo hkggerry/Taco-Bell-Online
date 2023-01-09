@@ -5,7 +5,8 @@ function MenuPreview({ foodType }) {
   return (
     <div>
       <center>
-        <button class="btn btn-warning">{foodType.category}</button>
+        <b>{foodType.category}</b>
+        <hr />
         {preview}
       </center>
     </div>
