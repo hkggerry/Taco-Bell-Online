@@ -36,7 +36,7 @@ function Login() {
   return (
     <div>
       <center>
-        <br />
+        <hr />
         <form onSubmit={handleSubmit}>
           <div class="mb-3">
             <label htmlFor="username" class="form-label">
