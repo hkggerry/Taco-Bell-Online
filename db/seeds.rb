@@ -39,7 +39,7 @@ Menu.create([
     },
     {
         id: 4,
-        name: "Nacho Cheese Doritos Loco Taco",
+        name: "Nacho Cheese Taco",
         price: 2.39,
         ingredients: "Cheddar Cheese, Doritos Loco Taco Nacho Cheese Shell, Iceberg Lettuce, Seasoned Beef",
         image_url: "https://www.tacobell.com/images/22172_nacho_cheese_doritos_locos_tacos_269x269.jpg",
@@ -95,7 +95,7 @@ Menu.create([
     },
     {
         id: 11,
-        name: "Cheese Bean And Rice Burrito",
+        name: "Cheese Bean Burrito",
         price: 1.15,
         ingredients: "Creamy Jalapeno Sauce, Flour Tortilla, Nacho Cheese Sauce, Refried Beans, Seasoned Rice",
         image_url: "https://www.tacobell.com/images/22283_cheesy_bean_and_rice_burrito_269x269.jpg",
@@ -103,7 +103,7 @@ Menu.create([
     },
     {
         id: 12,
-        name: "Double Steak Grilled Cheese Burrito",
+        name: "Grilled Steak Cheese Burrito",
         price: 6.79,
         ingredients: "Creamy Chipotle Sauce,Fiesta Tortilla Strips, Flour Tortilla, Nacho Cheese Sauce, Reduced-Fat Sour Cream, Seasoned Rice, Steak, Three Cheese Blend",
         image_url: "https://www.tacobell.com/images/23194_double_steak_grilled_cheese_burrito_classic_269x269.jpg",
@@ -119,7 +119,7 @@ Menu.create([
     },
     {
         id: 14,
-        name: "MTN DEW Baja Blast Freeze",
+        name: "Baja Blast Freeze",
         price: 3.19,
         ingredients: "Mtn Dew® Baja Blast Freeze",
         image_url: "https://www.tacobell.com/images/1491_mtn_dew_baja_blast_freeze_269x269.jpg",

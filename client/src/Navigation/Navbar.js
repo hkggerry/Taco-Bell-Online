@@ -27,16 +27,17 @@ function Navbar() {
   if (loggedIn) {
     return (
       <div>
-        <h3>Welcome back {customer.name}!</h3>
+        <h3>Welcome back {customer.name}</h3>
+        {/* <p>This is an online store simulator. Have fun!</p> */}
         <NavLink to="/" style={linkStyles}>
           Home
         </NavLink>
         <NavLink to="/menu" style={linkStyles}>
           Menu
         </NavLink>
-        <NavLink to="/delivery" style={linkStyles}>
+        {/* <NavLink to="/delivery" style={linkStyles}>
           Delivery
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/shoppingcart" style={linkStyles}>
           Shopping Cart
         </NavLink>
@@ -49,15 +50,16 @@ function Navbar() {
     return (
       <div>
         <h3>Hi Stranger!</h3>
+        <p>Please login to access our extensive menu.</p>
         <NavLink to="/" style={linkStyles}>
           Home
         </NavLink>
         <NavLink to="/login" style={linkStyles}>
           Menu
         </NavLink>
-        <NavLink to="/login" style={linkStyles}>
+        {/* <NavLink to="/login" style={linkStyles}>
           Delivery
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/login" style={linkStyles}>
           Shopping Cart
         </NavLink>

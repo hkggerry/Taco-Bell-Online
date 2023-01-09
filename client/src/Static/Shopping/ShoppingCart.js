@@ -4,6 +4,7 @@ import ShoppingCartList from "./ShoppingCartList";
 
 function ShoppingCart() {
   const [cart, setCart] = useState([]);
+  const [totalCart, setTotalCart] = useState([]);
   const [toggle, setToggle] = useState(true);
   const { customer } = useContext(CustomerContext);
 
@@ -36,11 +37,17 @@ function ShoppingCart() {
       />
     );
   });
+  var total = memberCart.map((y) => y.total);
+  var sum = 0;
+
+  total.forEach((x) => (sum += x));
 
   return (
     <div>
       <hr />
-      <div class="container"> {cartItem}</div>
+      <div class="container2"> {cartItem}</div>
+      ---------------------------------------------------
+      <h2>Total: ${sum}</h2>
     </div>
   );
 }

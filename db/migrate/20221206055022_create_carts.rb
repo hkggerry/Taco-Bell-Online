@@ -4,6 +4,7 @@ class CreateCarts < ActiveRecord::Migration[6.1]
       t.integer :customer_id
       t.integer :menu_id
       t.integer :quantity
+      t.decimal :total
       t.timestamps
     end
   end

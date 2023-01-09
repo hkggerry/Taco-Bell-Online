@@ -36,22 +36,29 @@ function Login() {
   return (
     <div>
       <center>
-        <hr />
         <br />
         <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Email:</label>
+          <div class="mb-3">
+            <label htmlFor="username" class="form-label">
+              Email:
+            </label>
             <input
+              class="form-control"
               type="text"
               name="username"
+              placeholder="Email Address"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div>
-            <label htmlFor="password">Password:</label>
+          <div class="mb-3">
+            <label htmlFor="password" class="form-label">
+              Password:
+            </label>
             <input
+              class="form-control"
+              placeholder="Password"
               type="password"
               name="password"
               id="password"
@@ -59,9 +66,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <br />
-          <input type="submit" value="Login" />
-          <h4 onClick={navigateLogin}>Don't have an account?</h4>
+          <input type="submit" value="Login" class="btn btn-secondary" />
+          <br /> <br />
+          <h5 onClick={navigateLogin}>Don't have an account?</h5>
         </form>
       </center>
     </div>

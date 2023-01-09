@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_12_06_055353) do
     t.integer "customer_id"
     t.integer "menu_id"
     t.integer "quantity"
+    t.decimal "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

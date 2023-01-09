@@ -30,9 +30,9 @@ function MenuCard({ food }) {
     alert(food.ingredients);
   }
   return (
-    <div className="item">
+    <div className="rcorners2">
       <img src={food.image_url} alt={food.name} height="250px" />
-      <h4>{food.name}</h4>${food.price} | {food.calories} Cal
+      <h5>{food.name}</h5>${food.price} | {food.calories} Cal
       <p onClick={clickIngredient}>Nutrition Info: &#127790;</p>
       {inCart ? (
         <u>Added </u>

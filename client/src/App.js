@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Phase 5 - Capstone Project</h1>
+        <h1>~Taco Bell Online~</h1>
       </header>
       <CustomerProvider>
         <Navbar />
@@ -35,6 +35,7 @@ function App() {
           alt="taco"
           height="300px"
         />
+        <p>© Gerry Wong, Inc. All rights reserved.</p>
       </CustomerProvider>
     </div>
   );
