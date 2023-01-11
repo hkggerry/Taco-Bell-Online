@@ -1,8 +1,9 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :update, :destroy]
+  
 
     def index
-        carts = Cart.where(:customer_id => session[:customer_id])
+        carts = Cart.where(:customer_id => session[:customer_id]).order(:id)
         render json: carts
         # .to_json(except: [:created_at, :updated_at], include: [menu: {only:[:name, :price, :image_url]}])
       end

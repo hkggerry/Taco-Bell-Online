@@ -24,27 +24,30 @@ function ShoppingCart() {
 
   const memberCart = cart.filter((x) => x.customer_id === customer.id);
 
-  const cartItem = memberCart.map((x) => {
-    return (
-      <ShoppingCartList
-        key={x.id}
-        eachOrder={x}
-        eachItem={x.menu}
-        onDeleteItem={handleDeleteCart}
-        toggle={toggle}
-        setToggle={setToggle}
-      />
-    );
-  });
   var total = memberCart.map((y) => y.total);
   var sum = 0;
 
   total.forEach((x) => (sum += x));
 
+  const menucart = memberCart.map((y) => console.log(y));
+
   return (
     <div>
       <hr />
-      <div class="container2"> {cartItem}</div>
+      <div class="container2">
+        {memberCart.map((x) => {
+          return (
+            <ShoppingCartList
+              key={x.id}
+              eachOrder={x}
+              eachItem={x.menu}
+              onDeleteItem={handleDeleteCart}
+              toggle={toggle}
+              setToggle={setToggle}
+            />
+          );
+        })}
+      </div>
       ---------------------------------------------------
       <h2>Total: ${sum}</h2>
     </div>
