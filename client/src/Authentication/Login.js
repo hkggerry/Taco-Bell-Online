@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorsList2, setErrorsList2] = useState([]);
   const { login } = useContext(CustomerContext);
   const navigate = useNavigate();
 
@@ -19,13 +20,15 @@ function Login() {
       }),
     })
       .then((res) => res.json())
-      .then((member) => {
-        if (!member.errors) {
-          login(member);
+      .then((customer) => {
+        if (!customer.errors) {
+          login(customer);
           navigate("/");
         } else {
           setUsername("");
           setPassword("");
+          const errorLis = customer.errors.map((e) => <div>{e}</div>);
+          setErrorsList2(errorLis);
         }
       });
   }
@@ -70,6 +73,7 @@ function Login() {
           <br /> <br />
           <h5 onClick={navigateLogin}>Don't have an account?</h5>
         </form>
+        <ul>{errorsList2}</ul>
       </center>
     </div>
   );

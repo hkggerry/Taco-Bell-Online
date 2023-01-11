@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CustomerContext } from "../useContext/Customer";
+import MenuCategory from "./MenuCategory";
 
 function MenuCard({ food }) {
   const { customer } = useContext(CustomerContext);
@@ -26,13 +27,18 @@ function MenuCard({ food }) {
       });
   }
 
+  const categoryMap = food.categories.map((eachCategory) => {
+    return <MenuCategory key={eachCategory.id} eachCategory={eachCategory} />;
+  });
+
   function clickIngredient() {
     alert(food.ingredients);
   }
   return (
     <div className="rcorners2">
       <img src={food.image_url} alt={food.name} height="250px" />
-      <h5>{food.name}</h5>${food.price} | {food.calories} Cal
+      <h5>{food.name}</h5>
+      <p>{categoryMap}</p>${food.price} | {food.calories} Cal
       <p onClick={clickIngredient}>Nutrition Info: &#127790;</p>
       {inCart ? (
         <u>Added </u>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ShoppingCartListInside from "./ShoppingCartListInside";
 
 function ShoppingCartList({
   eachItem,
@@ -53,8 +54,15 @@ function ShoppingCartList({
   return (
     <div>
       <div>
+        <ShoppingCartListInside
+          handleDelete={handleDelete}
+          eachItem={eachItem}
+          eachOrder={eachOrder}
+          setEditQuantity={setEditQuantity}
+          handleEdit={handleEdit}
+        />
         {/* <img src={eachItem.image_url} alt={eachItem.name} height="250px" /> */}
-        <h5>
+        {/* <h5>
           <b onClick={handleDelete}>
             {eachItem.name} - ${eachOrder.total} &#10060;
           </b>
@@ -75,7 +83,7 @@ function ShoppingCartList({
             </select>
             <button onClick={handleEdit}>Change</button>
           </form>
-        </h5>
+        </h5> */}
       </div>
     </div>
   );

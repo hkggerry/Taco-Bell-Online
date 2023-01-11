@@ -10,6 +10,7 @@ def create
     end
 end
 
+
 def show
     customer = Customer.find_by(id: session[:customer_id])
     if customer

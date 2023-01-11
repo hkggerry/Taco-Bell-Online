@@ -4,7 +4,6 @@ import ShoppingCartList from "./ShoppingCartList";
 
 function ShoppingCart() {
   const [cart, setCart] = useState([]);
-  const [totalCart, setTotalCart] = useState([]);
   const [toggle, setToggle] = useState(true);
   const { customer } = useContext(CustomerContext);
 
