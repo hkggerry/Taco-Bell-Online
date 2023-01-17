@@ -53,7 +53,6 @@ function ShoppingCartList({
   return (
     <div>
       <div>
-        {/* <img src={eachItem.image_url} alt={eachItem.name} height="250px" /> */}
         <h5>
           <b onClick={handleDelete}>
             {eachItem.name} - ${eachOrder.total} &#10060;

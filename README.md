@@ -1,4 +1,24 @@
-# Project Template: React/Rails API
+# Welcome to my Phase 5 Capstone Project - Taco Bell Online
+
+I have created a webpage where customers can login to order tacos. (Featuring an extensive menu and a user friendly Shopping Cart) 
+Combining with React on frontend and Ruby on Rails for backend, I was able to easily create a functional webpage.
+
+## Guide to use Taco Bell Online
+
+1. In the beginning of the webpage, customer has the option to login or sign up to access account exclusive functions. 
+2. Once logged in, custoemr may navigate to the menu tab view the menu and add items in cart. 
+3. Customers can browse all their exisiting orders within shopping cart. 
+4. Customers cannot view other customer's orders.
+5. Each food item has its own category or two, it is showcased on the homepage.
+6. When a customer is finished with the webpage, simply clicking "Logout" button will log a customer out.
+
+## Challenges
+
+1. Creating a functional login/ signup button
+2. Building full CRUD for Reviews
+3. Making sense to the concepts of a join table
+
+This website might look simple, but I have poured my heart into creating this project. Thanks for checking out my project!
 
 ## Description
 

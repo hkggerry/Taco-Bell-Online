@@ -21,13 +21,14 @@ function Login() {
     })
       .then((res) => res.json())
       .then((customer) => {
-        if (!customer.errors) {
+        if (!customer.error) {
           login(customer);
           navigate("/");
         } else {
           setUsername("");
           setPassword("");
-          const errorLis = customer.errors.map((e) => <div>{e}</div>);
+          console.log(customer.error);
+          const errorLis = customer.error;
           setErrorsList2(errorLis);
         }
       });

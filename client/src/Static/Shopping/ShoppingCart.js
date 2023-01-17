@@ -1,41 +1,49 @@
-import React, { useState, useEffect, useContext } from "react";
-import { CustomerContext } from "../../useContext/Customer";
+import React, { useState, useEffect } from "react";
 import ShoppingCartList from "./ShoppingCartList";
 
 function ShoppingCart() {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
+  const [newCart, setNewCart] = useState([]);
   const [toggle, setToggle] = useState(true);
-  const { customer } = useContext(CustomerContext);
 
   useEffect(() => {
     fetch("/carts")
       .then((resp) => resp.json())
       .then((cartItems) => {
-        setCart(cartItems);
+        // setCart(cartItems);
+        setNewCart(
+          cartItems.map((userItems) =>
+            userItems.id === cartItems.id ? cartItems : userItems
+          )
+        );
       });
   }, [toggle]);
 
   function handleDeleteCart(deletedItem) {
     console.log("deletedItem", deletedItem);
-    const updatedItem = cart.filter((cart) => cart.id !== deletedItem.id);
-    setCart(updatedItem);
+    const updatedItem = newCart.filter((cart) => cart.id !== deletedItem.id);
+    setNewCart(updatedItem);
     setToggle(!toggle);
   }
 
-  const memberCart = cart.filter((x) => x.customer_id === customer.id);
+  // function updateCart(updatedItem) {
+  // this is where you will update the cart using the github repo
+  // Pass this as a callback
+  // Invoke after a successful patch request
+  // }
 
-  var total = memberCart.map((y) => y.total);
-  var sum = 0;
+  // const memberCart = cart.filter((x) => x.customer_id === customer.id);
+
+  let total = newCart.map((y) => y.total);
+  let sum = 0;
 
   total.forEach((x) => (sum += x));
-
-  const menucart = memberCart.map((y) => console.log(y));
 
   return (
     <div>
       <hr />
       <div class="container2">
-        {memberCart.map((x) => {
+        {newCart.map((x) => {
           return (
             <ShoppingCartList
               key={x.id}

@@ -1,25 +1,26 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :update, :destroy]
-  
+  before_action :set_cart, only: [:update, :destroy]
 
     def index
-        carts = Cart.where(:customer_id => session[:customer_id]).order(:id)
+        carts = current_user.carts.order(:id)
         render json: carts
-        # .to_json(except: [:created_at, :updated_at], include: [menu: {only:[:name, :price, :image_url]}])
+
       end
 
       def create
-        cart = Cart.where(:customer_id => session[:customer_id]).create(params.permit(:menu_id, :quantity))
+        cart = current_user.carts.create(params.permit(:menu_id, :quantity))
           render json: cart, status: :created
       end
 
       def destroy
-        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :customer_id
+        authorized_user
         @cart.destroy
+        head :no_content
       end
 
       def update
-        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :customer_id
+
+        authorized_user
         if @cart.update(quantity: params[:quantity])
           render json: @cart
         else
@@ -29,10 +30,17 @@ class CartsController < ApplicationController
 
       private
 
-      def set_cart
+    def set_cart
         @cart = Cart.find(params[:id])
     end
 
-    
+    def current_user
+      current_user = Customer.find_by(id: session[:customer_id])
+    end
+
+    def authorized_user
+      authorized_user = render json: { error: "Not authorized" }, status: :unauthorized unless @cart.customer_id == current_user.id
+    end
+
     
 end
