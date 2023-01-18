@@ -1,35 +1,14 @@
 import React, { useState } from "react";
 
-function ShoppingCartList({
-  eachItem,
-  onDeleteItem,
-  eachOrder,
-  toggle,
-  setToggle,
-  handleUpdateItem,
-}) {
+function ShoppingCartList({ eachItem, onDeleteItem, eachOrder, updateCart }) {
   const [editEachOrder, setEditEachOrder] = useState(eachOrder);
   const [editQuantity, setEditQuantity] = useState();
 
-  function handleDelete(e) {
-    e.preventDefault();
-    console.log("Delete!", eachOrder);
+  function handleDelete() {
     fetch(`/carts/${eachOrder.id}`, {
       method: "DELETE",
-    }).then(() => {
-      onDeleteItem(eachItem);
-      setToggle(!toggle);
     });
-  }
-  function handleUpdateItem(eachOrder) {
-    const formValues = {
-      id: eachOrder.id,
-      customer_id: eachOrder.customer_id,
-      menu_id: eachOrder.menu_id,
-      quantity: eachOrder.quantity,
-    };
-    setEditEachOrder(formValues);
-    setToggle(!toggle);
+    onDeleteItem(eachOrder);
   }
 
   function handleEdit(e) {
@@ -46,7 +25,7 @@ function ShoppingCartList({
       .then((resp) => resp.json())
       .then((updatedQuantity) => {
         console.log(updatedQuantity);
-        handleUpdateItem(updatedQuantity);
+        updateCart(updatedQuantity);
       });
   }
 
